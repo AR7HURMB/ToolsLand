@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -22,14 +24,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 8px;
+    gap: 52px;
 }
 
 .header-menu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 56px;
+    gap: 60px;
+}
+
+.header-menu ul a {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .header-btns {
@@ -37,9 +48,10 @@ header {
     gap: 16px;
 }
 
-.header-btns button {
+.header-button {
     border: none;
     font-size: 15px;
+    width: 8em;
 }
 
 #signUp-btn {
