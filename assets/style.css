@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 7em;
+    background-color: #d1cdcc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px;
+}
+
+.logo {
+    width: 14.4em;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.header-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+}
+
+.header-btns {
+    display: flex;
+    gap: 16px;
+}
+
+.header-btns button {
+    border: none;
+    font-size: 15px;
+}
+
+#signUp-btn {
+    background-color: #dd2c00;
+    color: white;
+}
+
+#signIn-btn {
+    background-color: white;
+}
