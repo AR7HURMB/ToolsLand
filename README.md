@@ -6,6 +6,3 @@ The ToolsLand project is for interdisciplinar homework where each group must cre
 - Daniel dos Santos Soares (danielsoares123)
 - Heloisa Pereira Rodrigues de Oliveira
 - Joan Pietro Fernandes de Araújo
-
-### Images websites
-- [https://toolsort.com.br](https://toolsort.com.br)
