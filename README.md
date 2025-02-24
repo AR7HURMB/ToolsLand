@@ -3,7 +3,7 @@ The ToolsLand project is for interdisciplinar homework where each group must cre
 
 ## Credits:
 ### Group members
-- Daniel dos Santos Soares
+- Daniel dos Santos Soares (danielsoares123)
 - Heloisa Pereira Rodrigues de Oliveira
 - Joan Pietro Fernandes de Araújo
 
