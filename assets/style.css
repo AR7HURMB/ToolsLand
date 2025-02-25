@@ -1,64 +1,309 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Resetando o CSS */
 * {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: "Inter";
+    text-transform: uppercase;
 }
 
-header {
-    height: 7em;
+html {
+    overflow: hidden;
+}
+
+/* Tipo principal de cabeçalho */
+.main-type-header {
+    width: 100vw;
+    height: 92px;
     background-color: #d1cdcc;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 36px;
+
+    .logo {
+        width: 13em;
+    }
+
+    .actions-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 56px;
+    }
+
+    .header-menu ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .header-menu ul a {
+        font-size: 15px;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        transition: .6s color ease;
+    }
+
+    .header-menu a:hover {
+        color: #f83a00;
+    }
+
+    .header-btns {
+        display: flex;
+        gap: 18px;
+    }
+
+    .header-button {
+        border: none;
+        font-size: 12.5px;
+        width: 9.4em;
+        height: 2.8em;
+        border-radius: 14px;
+        cursor: pointer;
+        transition: .6s ease;
+    }
+
+    #signUp-btn {
+        background-color: #dd2c00;
+        color: white;
+    }
+
+    #signUp-btn:hover {
+        background-color: #ca2800;
+    }
+
+    #signUp-btn:active {
+        background-color: #b42400;
+    }
+    
+    #signIn-btn {
+        background-color: white;
+    }
+
+    #signIn-btn:hover {
+        background-color: #f1f1f1;
+    }
+
+    #signIn-btn:active {
+        background-color: #e5e5e5;
+    }
 }
 
-.logo {
-    width: 14.4em;
+/* Página inicial */
+.home-img {
+    height: 496px;
 }
 
-.actions-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 52px;
-}
-
-.header-menu ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.header-menu ul a {
-    font-size: 14px;
-    color: black;
-    text-decoration: none;
-    font-family: "Inter";
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.header-btns {
-    display: flex;
-    gap: 16px;
-}
-
-.header-button {
-    border: none;
-    font-size: 15px;
-    width: 8em;
-}
-
-#signUp-btn {
-    background-color: #dd2c00;
+main p {
     color: white;
+    font-weight: 500;
+    translate: 4em -21em;
+    font-size: 21px;
+    width: 14em;
+    line-height: 34px;
+    position: absolute;
 }
 
-#signIn-btn {
-    background-color: white;
+footer {
+    background-color: #d1cdcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 82px - 496px);
+    translate: 0 -4px;
+    gap: 54px;
+}
+
+footer span {
+    display: flex;
+    gap: 8px;
+    scale: .9;
+    translate: 0 -2px;
+    img {
+        width: 20px;
+    }
+    p {
+        font-size: 14px;
+        translate: 0 2px;
+        font-weight: bold;
+    }
+}
+
+
+form.container {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 27em;
+    height: 24.7em;
+    border-radius: 18px;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.25);
+    padding: 0 28px;
+}
+
+h1 {
+    color: #ff5900;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+input:not(input[type=range]) {
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius: 6px;
+    text-indent: 14px;
+    padding-right: 4px;
+    height: 2.2em;
+    width: 100%;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.33);
+    font-size: 13px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+input[type=range] {
+    appearance: none;
+    border: none;
+    background-color: #ff5900;
+    height: 8px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    width: 47.5%;
+}
+
+input[type=password] {
+    margin-top: 20px;
+}
+
+#age-blitter {
+    font-size: 12px;
+    translate: 5px -2px;
+    margin: 8px 0 4px 0;
+}
+
+#signUp-page body, #signIn-page body, #services body {
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top-logo {
+    scale: .66;
+    margin: 20px 0;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+.form-body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comp-name-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.comp-name-div input {
+    flex-basis: 1;
+}
+
+.form-final-btn {
+    background-color: #dd2c00;
+    border: none;
+    border-radius: 8px;
+    height: 2.2em;
+    width: 9.8em;
+    height: 2.6em;
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    box-sizing: content-box;
+    padding: 0 1px;
+    margin-top: 24px;
+    transition: .6s ease;
+}
+
+.form-final-btn:hover {
+    background-color: #ca2800;
+}
+
+.form-final-btn:active {
+    background-color: #b42400;
+}
+
+.bottom-text {
+    font-size: 10px;
+    margin-top: 13px;
+}
+
+.bottom-text a {
+    color: #dd2c00;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.divisory {
+    width: 100%;
+    margin: 18px 0 12px 0;
+    background-color: rgba(0, 0, 0, 0.33);
+    height: 1px;
+}
+
+.forgotPw-link {
+    color: #dd2c00;
+    font-size: 9px;
+    margin-top: 32px;
+}
+
+#signIn-page {
+    .bottom-text {
+        margin-top: 22px;
+    }
+
+    .form-final-btn {
+        margin-top: 14px;
+    }
+
+    .divisory {
+        margin-bottom: 20px;
+    }
+
+    .form-header {
+        margin-bottom: 7px;
+    }
 }

@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="home-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="empréstimos, ferramentas, toolsland">
+    <meta name="description" content="Um sistema prático de empréstimos de ferramentas diversas">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../img/icon.png">
     <script src="script.js" defer></script>
     <title>ToolsLand - Um mundo de ferramentas na tela do seu dispositivo!</title>
 </head>
 <body>
-    <header>
+    <header class="main-type-header">
         <img src="../img/logo.png" alt="Logomarca da ToolsLand" class="logo">
         <div class="actions-container">
             <nav class="header-menu">
                 <ul type="none">
                     <li><a href="">Categorias</a></li>
-                    <li><a href="">Serviços</a></li>
+                    <li><a href="pages/services.html">Serviços</a></li>
                     <li><a href="">Ajuda</a></li>
                     <li><a href="">Sobre</a></li>
                 </ul>
             </nav>
             <div class="header-btns">
-                <button id="signUp-btn" class="header-button">Cadastrar-se</button>
-                <button id="signIn-btn" class="header-button">Entrar</button>
+                <a href="pages/formpages/signup.html">
+                    <button id="signUp-btn" class="header-button">Cadastrar-se</button>
+                </a>
+                <a href="pages/formpages/signin.html">
+                    <button id="signIn-btn" class="header-button">Entrar</button>
+                </a>
             </div>
         </div>
     </header>
+
+    <main>
+        <img src="../img/home-img.webp" alt="Imagem principal" class="home-img">
+        <p>Ferramentas para seu sucesso, com a confiança que você precisa</p>
+    </main>
+
+    <footer>
+        <span>
+            <img src="../img/social/instagram.svg" alt="Instagram">
+            <p>@TOOLSLAND</p>
+        </span>
+        <span>
+            <img src="../img/social/twitter-x.svg" alt="X">
+            <p>@TOOLSLAND</p>
+        </span>
+        <span>
+            <img src="../img/social/whatsapp.svg" alt="WhatsApp">
+            <p>(84) 9.97004261</p>
+        </span>
+        <span>
+            <img src="../img/social/facebook.svg" alt="Fcaebook">
+            <p>@TOOLSLAND</p>
+        </span>
+    </footer>
 </body>
 </html>
