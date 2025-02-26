@@ -1,4 +1,6 @@
+/* Importando fontes */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Resetando o CSS */
 * {
@@ -11,6 +13,10 @@
 }
 
 html {
+    overflow-x: hidden;
+}
+
+#home-page {
     overflow: hidden;
 }
 
@@ -100,6 +106,7 @@ html {
     height: 496px;
 }
 
+/* Parágrafo do elemento principal */
 main p {
     color: white;
     font-weight: 500;
@@ -125,17 +132,19 @@ footer span {
     gap: 8px;
     scale: .9;
     translate: 0 -2px;
-    img {
-        width: 20px;
-    }
-    p {
-        font-size: 14px;
-        translate: 0 2px;
-        font-weight: bold;
-    }
 }
 
+footer span img {
+    width: 20px;
+}
 
+footer span p {
+    font-size: 14px;
+    translate: 0 2px;
+    font-weight: bold;
+}
+
+/* Contêiner de formulário */
 form.container {
     background: white;
     display: flex;
@@ -147,18 +156,19 @@ form.container {
     border-radius: 18px;
     box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.25);
     padding: 0 28px;
+
+    h1 {
+        color: #ff5900;
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-weight: 500;
+        font-size: .8rem;
+    }
 }
 
-h1 {
-    color: #ff5900;
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: .8rem;
-}
-
+/* Páginas com formulário (login e cadastro) */
 input:not(input[type=range]) {
     border: 1px solid rgba(0, 0, 0, 0.33);
     border-radius: 6px;
@@ -168,6 +178,7 @@ input:not(input[type=range]) {
     width: 100%;
 }
 
+/* Estilização de placeholder */
 input::placeholder {
     color: rgba(0, 0, 0, 0.33);
     font-size: 13px;
@@ -178,6 +189,7 @@ label {
     margin-top: 16px;
 }
 
+/* Estilização de elemento input do tipo range */
 input[type=range] {
     appearance: none;
     border: none;
@@ -188,17 +200,20 @@ input[type=range] {
     width: 47.5%;
 }
 
+
 input[type=password] {
     margin-top: 20px;
 }
 
+/* Estilização do texto que mostra o valor do input do tipo range */
 #age-blitter {
     font-size: 12px;
     translate: 5px -2px;
     margin: 8px 0 4px 0;
 }
 
-#signUp-page body, #signIn-page body, #services body {
+/* Estilização de elementos body */
+#signUp-page body, #signIn-page body, #services-page body {
     background-color: #e8e8e8;
     display: flex;
     justify-content: center;
@@ -211,6 +226,7 @@ input[type=password] {
     margin: 20px 0;
 }
 
+/* Estilização dos formulários */
 .form-header {
     display: flex;
     justify-content: center;
@@ -238,6 +254,7 @@ input[type=password] {
     flex-basis: 1;
 }
 
+/* Estilização dos botões finais dos formulários */
 .form-final-btn {
     background-color: #dd2c00;
     border: none;
@@ -262,6 +279,7 @@ input[type=password] {
     background-color: #b42400;
 }
 
+/* Estilização do texto inferior */
 .bottom-text {
     font-size: 10px;
     margin-top: 13px;
@@ -290,6 +308,7 @@ input[type=password] {
     margin-top: 32px;
 }
 
+/* Estilização específica da página de login */
 #signIn-page {
     .bottom-text {
         margin-top: 22px;
@@ -306,4 +325,109 @@ input[type=password] {
     .form-header {
         margin-bottom: 7px;
     }
+}
+
+/* Página de serviços */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3.4em;
+    gap: 2.6em 6.4em;
+}
+
+.service {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease;
+    overflow: hidden;
+    height: 200px;
+}
+
+/* Estilização do pseudoelemento ::after dos elementos da class service */
+.service::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 168px;
+    rotate: 20deg;
+    translate: -154px -20px;
+    transition: .4s ease;
+    background: none;
+}
+
+.service:hover:after {
+    translate: 154px -20px;
+    background: linear-gradient(90deg, transparent, rgba(220, 220, 220, 0.8), transparent);
+}
+
+.service:hover {
+    translate: 0 -5px;
+}
+
+.service img {
+    width: 14em;
+}
+
+/* Estilização dos elementos h4 da página de serviços */
+.service h4 {
+    color: white;
+    background-color: #dd2c00;
+    font-size: 11px;
+    font-weight: 500;
+    width: 10.4em;
+    border-radius: 15px;
+    height: 3.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px 8px;
+    translate: 0 -2em;
+    z-index: 1;
+}
+
+/* Página de produtos */
+#products-page {
+    background-color: #fafafa;
+}
+
+#products-page h2 {
+    font-family: 'Poppins';
+    color: #f83a00;
+    font-size: 27px;
+}
+
+#products-page main {
+    width: 76%;
+    margin: 0 auto;
+}
+
+.manual-tools h2 {
+    margin-top: 38px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px 64px;
+    margin-top: 36px;
+    margin-bottom: 72px;
+}
+
+.card {
+    background-color: white;
+    width: 10.4em;
+    height: 13.4em;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Páginas de serviços */
+#toolManag-serv-page {
+    background-color: #fafafa;
 }
