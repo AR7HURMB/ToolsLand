@@ -23,15 +23,15 @@ html {
 /* Tipo principal de cabeçalho */
 .main-type-header {
     width: 100vw;
-    height: 92px;
+    height: 12vh;
     background-color: #d1cdcc;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 36px;
+    padding: 52px;
 
     .logo {
-        width: 13em;
+        width: 14vw;
     }
 
     .actions-container {
@@ -46,6 +46,7 @@ html {
         justify-content: space-between;
         align-items: center;
         gap: 60px;
+        list-style-type: none;
     }
 
     .header-menu ul a {
@@ -103,28 +104,28 @@ html {
 
 /* Página inicial */
 .home-img {
-    height: 496px;
+    height: 80vh;
+    translate: -4px 0;
 }
 
-/* Parágrafo do elemento principal */
-main p {
+#home-page main p {
     color: white;
     font-weight: 500;
-    translate: 4em -21em;
-    font-size: 21px;
+    translate: 4em -75vh;
+    font-size: 1.8rem;
     width: 14em;
-    line-height: 34px;
+    line-height: 2.6rem;
     position: absolute;
 }
 
-footer {
+#home-page footer {
     background-color: #d1cdcc;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 82px - 496px);
-    translate: 0 -4px;
+    height: calc(17vh - 92px);
     gap: 54px;
+    translate: 0 -4px;
 }
 
 footer span {
@@ -134,13 +135,14 @@ footer span {
     translate: 0 -2px;
 }
 
-footer span img {
-    width: 20px;
+footer span svg {
+    width: 28px;
+    scale: 1.2;
+    translate: 0 -1px;
 }
 
 footer span p {
     font-size: 14px;
-    translate: 0 2px;
     font-weight: bold;
 }
 
@@ -168,8 +170,15 @@ form.container {
     }
 }
 
-/* Páginas com formulário (login e cadastro) */
-input:not(input[type=range]) {
+/* Páginas com formulários */
+.form-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72vh;
+}
+
+input:not(input[type=range], input[type=submit]) {
     border: 1px solid rgba(0, 0, 0, 0.33);
     border-radius: 6px;
     text-indent: 14px;
@@ -200,7 +209,6 @@ input[type=range] {
     width: 47.5%;
 }
 
-
 input[type=password] {
     margin-top: 20px;
 }
@@ -213,7 +221,7 @@ input[type=password] {
 }
 
 /* Estilização de elementos body */
-#signUp-page body, #signIn-page body, #services-page body {
+.form-page body, #services-page body, #tool-cadastre-page body {
     background-color: #e8e8e8;
     display: flex;
     justify-content: center;
@@ -243,14 +251,14 @@ input[type=password] {
     width: 100%;
 }
 
-.comp-name-div {
+.inputs-top-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 14px;
 }
 
-.comp-name-div input {
+.inputs-top-div input {
     flex-basis: 1;
 }
 
@@ -285,6 +293,10 @@ input[type=password] {
     margin-top: 13px;
 }
 
+#signUp-page .bottom-text {
+    margin-top: 11px;
+}
+
 .bottom-text a {
     color: #dd2c00;
     text-decoration: none;
@@ -309,7 +321,7 @@ input[type=password] {
 }
 
 /* Estilização específica da página de login */
-#signIn-page {
+.form-page {
     .bottom-text {
         margin-top: 22px;
     }
@@ -327,12 +339,47 @@ input[type=password] {
     }
 }
 
-/* Página de serviços */
+#tool-cadastre-page form {
+    height: 19.8em;
+    margin-top: 2.6em;
+}
+
+#name-input {
+    margin-top: 12px;
+}
+
+.last-inputs-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 21px;
+}
+
+.last-inputs-div input {
+    flex-basis: 47.7%;
+}
+
+#tool-cadastre-page input[type=submit] {
+    margin-top: 36px;
+}
+
+/* Página com links relacionados aos serviços */
+#services-page {
+    overflow: hidden;
+}
+
+#services-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 92px);
+}
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 3.4em;
     gap: 2.6em 6.4em;
+    translate: 0 -7vh;
 }
 
 .service {
@@ -396,8 +443,10 @@ input[type=password] {
 
 #products-page h2 {
     font-family: 'Poppins';
-    color: #f83a00;
     font-size: 27px;
+    background: linear-gradient(to bottom right, #ff9257, #f83a00);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #products-page main {
@@ -425,9 +474,120 @@ input[type=password] {
     height: 13.4em;
     border-radius: 12px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: black;
+    flex-direction: column;
+}
+
+.card img:not(.card span img) {
+    width: 7em;
+    translate: 25%;
+}
+
+.card p {
+    color: inherit;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.card-container h4 {
+    color: #dd2c00;
+}
+
+.profile-span {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.profile-span h5 {
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.profile-span img {
+    width: 16px;
+    translate: 0 -2px;
+}
+
+#products-page footer {
+    background-color: #3f3c3B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 76px;
+    height: 4.6em;
+}
+
+#products-page span svg {
+    translate: 3px 3px;
+    width: 24px;
 }
 
 /* Páginas de serviços */
-#toolManag-serv-page {
+.service-page {
     background-color: #fafafa;
+}
+
+.service-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins';
+    height: calc(81.6vh);
+}
+
+.service-page h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 1.5em;
+    text-align: center;
+    width: 72%;
+}
+
+.servicepage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 72%;
+    margin-top: 3.4em;
+    gap: 56px 26px;
+}
+
+.servicepage-container h3 {
+    color: #ff5900;
+}
+
+.servicepage-container img {
+    height: 9.8em;
+}
+
+.servicepage-container ul {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 40px;
+    margin-top: 6px;
+    translate: 17px;
+}
+
+.service-text-span {
+    width: 80%;
+}
+
+/* Estilização de elementos da classe orange-footer */
+.orange-footer {
+    background-color: #ff7A33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.4vh;
+    gap: 88px;
+}
+
+.orange-footer svg {
+    width: 20px;
 }

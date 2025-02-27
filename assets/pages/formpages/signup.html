@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br" id="signUp-page">
+<html lang="pt-br" id="signUp-page" class="form-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
-    <link rel="icon" href="../../img/icon.png">
-    <script src="../script.js" defer></script>
+    <link rel="icon" href="../../../img/icon.png">
+    <script src="../../script.js" defer></script>
     <title>ToolsLand - Criar nova conta</title>
 </head>
 <body>
-    <img src="../../img/logo.png" alt="Logomarca da ToolsLand" class="top-logo">
-    <form class="container">
-        <div class="form-header">
-            <h1>Criar nova conta</h1>
-            <h2>Insira os dados requisitados</h2>
-        </div>
-        <div class="divisory"></div>
-        <div class="form-body">
-            <div class="comp-name-div">
-                <input type="text" placeholder="Nome" required autofocus>
-                <input type="text" placeholder="Sobrenome" required>
-            </div>
+    <header>
+        <img src="../../../img/logo.png" alt="Logomarca da ToolsLand" class="top-logo">
+    </header>
 
+    <main>
+        <form class="container">
+            <div class="form-header">
+                <h1>Criar nova conta</h1>
+                <h2>Insira os dados requisitados</h2>
+            </div>
+            <div class="divisory"></div>
+            <div class="form-body">
+                <div class="inputs-top-div">
+                    <input type="text" placeholder="Nome" required autofocus>
+                    <input type="text" placeholder="Endereço" required>
+            </div>
+            
             <label for="age-input">Idade</label>
             <p id="age-blitter">50</p>
             <input type="range" id="age-input" min="1" max="100" value="50">
-
+            
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Senha" required>
-
+            
         </div>
-        <button class="form-final-btn">Cadastrar-se</button>
+        <input type="submit" class="form-final-btn" value="Cadastrar-se">
         <p class="bottom-text">Já tem uma conta? <a href="signin.html">Entre já</a>.</p>
     </form>
+    </main>
 </body>
 </html>
