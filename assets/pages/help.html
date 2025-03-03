@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br" id="tool-manag-serv-page" class="service-page">
+<html lang="pt-br" id="help-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="icon" href="../../../img/icon.png">
-    <title>ToolsLand - Serviço: gestão de ferramentas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../../img/icon.png">
+    <title>ToolsLand - Obter ajuda</title>
 </head>
 <body>
     <header class="main-type-header">
-        <img src="../../../img/logo.png" alt="Logomarca da ToolsLand" class="logo">
+        <img src="../../img/logo.png" alt="Logomarca da ToolsLand" class="logo">
         <div class="actions-container">
             <nav class="header-menu">
                 <ul type="none">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../products.html">Produtos</a></li>
-                    <li><a href="../services.html">Serviços</a></li>
-                    <li><a href="../help.html">Ajuda</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
             <div class="header-btns">
-                <a href="../formpages/signup.html">
+                <a href="formpages/signup.html">
                     <button id="signUp-btn" class="header-button">Cadastrar-se</button>
                 </a>
-                <a href="../formpages/signin.html">
+                <a href="formpages/signin.html">
                     <button id="signIn-btn" class="header-button">Entrar</button>
                 </a>
             </div>
@@ -31,28 +31,55 @@
     </header>
 
     <main>
-        <h2>Assessoria especializada em organização e gestão para ferramentarias</h2>
-        <div class="servicepage-container">
-            <span class="service-text-span">
-                <h3>Controle e rastreabilidade</h3>
-                <ul>
-                    <li>Identificação e catalogação de todas as ferramentas.</li>
-                    <li>Uso de códigos de barras ou QR Codes para rastreamento.</li>
-                    <li>Registro de histórico de uso e manutenção.</li>
-                </ul>
-            </span>
-            <img src="../../../img/servicepages/tool-manag/image1.png" alt="Imagem ilustrativa">
-            <img src="../../../img/servicepages/tool-manag/image2.png" alt="Imagem ilustrativa">
-            <span class="service-text-span">
-                <h3>Organização e armazenamento</h3>
-                <ul>
-                    <li>Métodos eficientes de organização (painéis, gaveteiros, maletas).</li>
-                    <li>Identificação e etiquetagem para rastreabilidade.</li>
-                    <li>Controle de acesso e segurança no armazenamento.</li>
-                    <li>Separação por setor ou uso específico.</li>
-                </ul>
-            </span>
-        </div>
+        <form class="help-form">
+            <datalist id="problem-cats">
+                <option>Problemas com pedidos</option>
+                <option>Problemas técnicos</option>
+                <option>Problemas de segurança<option>
+                <option>Problemas com entregas<option>
+            </datalist>
+
+            <label for="problemcat-select">
+                <h3>Categoria do problema</h3>
+            </label>
+            <input type="text" list="problem-cats" aria-label="Seleção de categorias">
+            
+            <label for="problem-input">
+                <h3>Informe seu problema</h3>
+            </label>
+            <input type="text" id="problem-input" maxlength="200" aria-label="Campo para informe de problemas"
+            required autofocus>
+            <input type="submit" class="form-final-btn" value="Enviar" required>
+        </form>
+
+        <section class="popular-topics">
+            <h3>Tópicos populares</h3>
+            <div class="topics-container">
+                <div class="topic-div">
+                    <img src="../../img/helppage/image1.png" alt="Imagem ilustrativa">
+                    <span class="topic-text-span">
+                        <h4>Configurações da conta:</h4>
+                        <p>Problemas ao logar ou cadastrar na conta, erros ao tentar entrar</p>
+                    </span>
+                </div>
+
+                <div class="topic-div">
+                    <img src="../../img/helppage/image2.png" alt="Imagem ilustrativa">
+                    <span class="topic-text-span">
+                        <h4>Login e senha:</h4>
+                        <p>Problemas ao colocar emails e senhas na conta</p>
+                    </span>
+                </div>
+
+                <div class="topic-div">
+                    <img src="../../img/helppage/image3.png" alt="Imagem ilustrativa">
+                    <span class="topic-text-span">
+                        <h4>Privacidade e segurança:</h4>
+                        <p>Problemas na segurança da conta e na privacidade</p>
+                    </span>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="orange-footer">

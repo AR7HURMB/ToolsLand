@@ -12,6 +12,7 @@
     text-transform: uppercase;
 }
 
+/* Alterações iniciais */
 html {
     overflow-x: hidden;
 }
@@ -20,10 +21,18 @@ html {
     overflow: hidden;
 }
 
+input:not(input[type=submit]) {
+    text-transform: initial;
+}
+
+button {
+    cursor: pointer;
+}
+
 /* Tipo principal de cabeçalho */
 .main-type-header {
     width: 100vw;
-    height: 12vh;
+    height: 92px;
     background-color: #d1cdcc;
     display: flex;
     align-items: center;
@@ -104,15 +113,15 @@ html {
 
 /* Página inicial */
 .home-img {
-    height: 80vh;
+    height: calc(100vh - 92px - 3.8em);
     translate: -4px 0;
 }
 
 #home-page main p {
     color: white;
     font-weight: 500;
-    translate: 4em -75vh;
-    font-size: 1.8rem;
+    translate: 4em -18.6em;
+    font-size: 24px;
     width: 14em;
     line-height: 2.6rem;
     position: absolute;
@@ -123,7 +132,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(17vh - 92px);
+    height: 3.8em;
     gap: 54px;
     translate: 0 -4px;
 }
@@ -318,6 +327,12 @@ input[type=password] {
     color: #dd2c00;
     font-size: 9px;
     margin-top: 32px;
+    cursor: pointer;
+}
+
+.forgotPw-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* Estilização específica da página de login */
@@ -379,7 +394,7 @@ input[type=password] {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 3.4em;
     gap: 2.6em 6.4em;
-    translate: 0 -7vh;
+    translate: 0 -5vh;
 }
 
 .service {
@@ -452,6 +467,10 @@ input[type=password] {
 #products-page main {
     width: 76%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .manual-tools h2 {
@@ -475,42 +494,70 @@ input[type=password] {
     border-radius: 12px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     color: black;
     flex-direction: column;
+    padding: 0 8px;
+    cursor: pointer;
 }
 
 .card img:not(.card span img) {
-    width: 7em;
-    translate: 25%;
+    width: 5em;
+    margin: 12px;
 }
 
 .card p {
     color: inherit;
-    font-size: 11px;
+    font-size: 8px;
     line-height: 16px;
     font-weight: 400;
+    margin-top: 12px;
+    height: 48px;
+    translate: 0 -16px;
 }
 
 .card-container h4 {
     color: #dd2c00;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .profile-span {
     display: flex;
     justify-content: space-between;
-    gap: 4px;
+    width: max-content;
+    gap: 5px;
+    margin-bottom: 16px;
 }
 
 .profile-span h5 {
     font-weight: normal;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .profile-span img {
-    width: 16px;
-    translate: 0 -2px;
+    width: 14px;
+    translate: 0 -1px;
+}
+
+.toolCadastre-btn {
+    background-color: #dd2c00;
+    transition: .6s ease;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    height: 2.8em;
+    width: 16em;
+    translate: 0 -24px;
+}
+
+.toolCadastre-btn:hover {
+    background-color: #ca2800;
+}
+
+.toolCadastre-btn:active {
+    background-color: #b42400;
 }
 
 #products-page footer {
@@ -521,6 +568,7 @@ input[type=password] {
     align-items: center;
     gap: 76px;
     height: 4.6em;
+    margin-top: 20px;
 }
 
 #products-page span svg {
@@ -539,7 +587,6 @@ input[type=password] {
     align-items: center;
     flex-direction: column;
     font-family: 'Poppins';
-    height: calc(81.6vh);
 }
 
 .service-page h2 {
@@ -569,7 +616,7 @@ input[type=password] {
 .servicepage-container ul {
     font-weight: 300;
     font-size: 12px;
-    line-height: 40px;
+    line-height: 38px;
     margin-top: 6px;
     translate: 17px;
 }
@@ -584,10 +631,93 @@ input[type=password] {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.4vh;
+    height: 3.4em;
     gap: 88px;
+    margin-top: 2.6em;
 }
 
 .orange-footer svg {
     width: 20px;
+}
+
+/* Página de ajuda */
+#help-page {
+    background-color: #fafafa;
+}
+
+#help-page main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#help-page h3 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.help-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 26.4%;
+}
+
+.help-form input {
+    border: rgba(0, 0, 0, 0.33);
+}
+
+.help-form input[type=text] {
+    margin-top: 13px;
+}
+
+.popular-topics {
+    width: 55%;
+    margin-top: 14px;
+}
+
+.topics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.topic-div {
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 12.8em;
+    height: 12.6em;
+    border-radius: 8px;
+    padding: 0 13px 26px;
+    transition: .4s ease;
+}
+
+.topic-div:hover {
+    background-color: #f1f1f1;
+}
+
+.topic-text-span h4 {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.topic-text-span p {
+    color: rgba(0, 0, 0, 0.64);
+    font-size: 10px;
+    margin-top: 6px;
+    line-height: 17px;
+    height: 51px;
+}
+
+.topic-div img {
+    width: 6em;
+    margin-top: 26px;
 }
