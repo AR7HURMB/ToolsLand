@@ -15,6 +15,7 @@
 /* Alterações iniciais */
 html {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 #home-page {
@@ -478,10 +479,8 @@ input[type=password] {
 }
 
 .products-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 28px 64px;
     margin-top: 36px;
     margin-bottom: 72px;
